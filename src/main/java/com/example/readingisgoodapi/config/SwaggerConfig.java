@@ -23,8 +23,8 @@ public class SwaggerConfig {
     }
 
     private ApiInfo apiEndPointsInfo() {
-        return new ApiInfoBuilder().title("Book Management")
-                .description("Book Management")
+        return new ApiInfoBuilder().title("Book Order Management")
+                .description("Book Order Management")
                 .version("1.0.0")
                 .build();
     }

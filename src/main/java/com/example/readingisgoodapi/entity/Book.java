@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Data
 @Entity(name = "book")
@@ -13,11 +14,14 @@ import javax.persistence.*;
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long bookId;
 
     private String name;
-    private boolean isActive;
+    private String author;
+    private int publishYear;
+    private int stock;
+    private boolean active;
     @Version
-    private Integer version;
+    private int version;
 
 }
