@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "e5959c0f-3a17-4db3-85d4-74ceaa3a2b21",
+		"name": "readingIsGood-Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "save-customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJpZCIsInN1YiI6InRlc3QiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjIwNTg4MjAxLCJleHAiOjE2MjA1ODg4MDF9.-w344O0ZUEMTFo33tc4PcV4NzRwm8Nxr45kqxvi-_30gjdrMVMGrMcO7B0nWmsdXR7YbeTJpQTg_vcte2ErfIQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"ahmet\",\r\n  \"surname\": \"kara\",\r\n  \"phone\": \"05051112233\",\r\n  \"email\": \"ahmet@gmail.com\",\r\n  \"addressList\": [\r\n    {\r\n      \"active\": true,\r\n      \"address\": \"barbaros caddesi\",\r\n      \"customerId\": 1\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8035/api/save-customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8035",
+					"path": [
+						"api",
+						"save-customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "place-order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJpZCIsInN1YiI6InRlc3QiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjIwNTg4MjAxLCJleHAiOjE2MjA1ODg4MDF9.-w344O0ZUEMTFo33tc4PcV4NzRwm8Nxr45kqxvi-_30gjdrMVMGrMcO7B0nWmsdXR7YbeTJpQTg_vcte2ErfIQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customerId\": 1,\r\n  \"addressId\": 1,\r\n  \"bookId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8035/api/place-order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8035",
+					"path": [
+						"api",
+						"place-order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list-all-orders-by-customerid",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJpZCIsInN1YiI6InRlc3QiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjIwNTg4MjAxLCJleHAiOjE2MjA1ODg4MDF9.-w344O0ZUEMTFo33tc4PcV4NzRwm8Nxr45kqxvi-_30gjdrMVMGrMcO7B0nWmsdXR7YbeTJpQTg_vcte2ErfIQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8035/api/list-all-orders-by-customerid?customerId=1&isActiveOrder=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8035",
+					"path": [
+						"api",
+						"list-all-orders-by-customerid"
+					],
+					"query": [
+						{
+							"key": "customerId",
+							"value": "1"
+						},
+						{
+							"key": "isActiveOrder",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view-order-details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJpZCIsInN1YiI6InRlc3QiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjIwNTg1ODI1LCJleHAiOjE2MjA1ODY0MjV9.1iiCNffVaFXEst4CaQu7uPXQnBU9PGVrAto7nCk9LPKnRHkOMFPgkmZnbxE7YKS-j70EPtxLAvwUyRZvHdmDyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8035/api/view-order-details?orderId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8035",
+					"path": [
+						"api",
+						"view-order-details"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-all-stocks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoic2ViYXMiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjIwNTgxODk3LCJleHAiOjE2MjA1ODI0OTd9.VXMprNpumSvpJoSGqU_6Qd1PngTTZM_AZ5mEmCIZKGIJg8b8yAP5bkbWZw64NnUsLDCzh0FCzvN7oFzRRGHozA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8035/api/get-all-stocks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8035",
+					"path": [
+						"api",
+						"get-all-stocks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8035/api/get-token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8035",
+					"path": [
+						"api",
+						"get-token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
