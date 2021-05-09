@@ -27,6 +27,14 @@ First of all, user must get bearer token with username and password that provide
 
 Postman collection file can be found under /src/main/resources.  
 
+h-2 console link ; 
+
+```
+http://localhost:8035/h2-console
+```
+
+Bearer token link;  
+
 ```
 http://localhost:8035/api/get-token
 ```
